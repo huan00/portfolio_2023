@@ -1,0 +1,64 @@
+.app__about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app__about__profileImg {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primaryColor);
+}
+
+.app__about__profileImg img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.app__about__content {
+  flex: 1;
+  height: 100%;
+  background-color: var(--secondaryColor);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  line-height: 32px;
+}
+
+.app__about__content p {
+  line-height: 24px;
+}
+
+.content-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.content-btn a {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.content-btn a:hover {
+  background-color: var(--btnColor);
+  color: white
+}

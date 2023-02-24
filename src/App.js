@@ -1,7 +1,8 @@
 import { useRef } from 'react'
 import './app.css'
-
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
+import Project from './components/project/Project'
 
 const App = () => {
   const flipScreen = useRef(null)
@@ -24,7 +25,9 @@ const App = () => {
         }}
         onClick={handleFlipScreen}
       ></div>
-      <Home flipScreen={flipScreen} />
+      <Routes>
+        <Route path="/" element={<Home flipScreen={flipScreen} />} />
+      </Routes>
     </div>
   )
 }

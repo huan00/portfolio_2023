@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 :root {
   --bgColor: #415a77;
   --primaryColor: #1b263b;
   --secondaryColor: #0d1b2a;
+  --btnColor: #16697a;
   --white: #fff;
   --black: #000;
 
@@ -21,6 +25,7 @@ body {
   width: 100vw;
   color: white;
   position: relative;
+  font-family: 'Raleway';
 }
 
 
@@ -37,4 +42,10 @@ body {
   transform-style: preserve-3d;
   transform: translateZ(-3000px) perspective(-3000px)
   /* rotateY(45deg); */
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--white)
 }

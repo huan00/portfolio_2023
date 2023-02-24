@@ -1,0 +1,21 @@
+.app__projects {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.project__container {
+  width: 100px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.project__container:hover {
+  transform: translateY(20px)
+}
+
+.project__container img {
+  width: 75px
+}
