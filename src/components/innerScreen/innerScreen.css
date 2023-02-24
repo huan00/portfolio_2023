@@ -1,0 +1,52 @@
+.app__inner-screen {
+  height: calc(var(--deviceHeight) - 40px);
+  width: calc(var(--deviceWidth) - 40px);
+  background-image: url('../../assets/images/background_image.jpg');
+  background-position: 100% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+
+  position: absolute;
+  top: 20px;
+  padding: 25px;
+
+  transform: translate(-50%, 0) translateZ(-20px);
+  visibility: hidden;
+  /* display: none; */
+}
+
+.first-half.active ~ .app__inner-screen {
+  animation: showInner 500ms 1s forwards ease;
+}
+
+@keyframes showInner {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100%{
+    opacity: 1;
+    visibility: visible; 
+    /* display: block;  */
+  }
+}
+
+.app__inner-screen__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.footer--img {
+  width: 50px;
+  /* background-color: white; */
+}
+
+.footer--img img {
+  width: 50px;
+}

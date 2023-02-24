@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from 'react'
+import './app.css'
 
-function App() {
+import Home from './pages/home/Home'
+
+const App = () => {
+  const flipScreen = useRef(null)
+
+  const handleFlipScreen = () => {
+    flipScreen.current.classList.toggle('active')
+    flipScreen.current.classList.toggle('no-after')
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          zIndex: '-10',
+          perspective: '-3000px',
+          cursor: 'pointer',
+          transform: 'translateZ(-550px)'
+        }}
+        onClick={handleFlipScreen}
+      ></div>
+      <Home flipScreen={flipScreen} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

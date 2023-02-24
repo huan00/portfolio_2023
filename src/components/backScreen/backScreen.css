@@ -1,0 +1,29 @@
+.app__back-face {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  background-position: 100% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+
+  position: absolute;
+}
+
+.first-half.active .app__back-face {
+  animation: fadeFront 1s forwards ease;
+}
+
+@keyframes fadeFront {
+  from {opacity: 0;}
+  to {opacity: 1; visibility: visible;}
+}
+
+.first-half .app__back-face {
+  animation: fadeHalf 1.5s forwards ease;
+}
+
+@keyframes fadeHalf  {
+  from {opacity: 1;}
+  to {opacity: 0; visibility: hidden;}
+}
