@@ -15,6 +15,12 @@ const Email = () => {
         target="__blank"
         onSubmit={handleClick}
       >
+        <input
+          type="text"
+          name="myemail"
+          placeholder="To: hello@huan-zeng.com"
+          disabled
+        />
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea

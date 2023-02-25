@@ -26,7 +26,12 @@ const App = () => {
         onClick={handleFlipScreen}
       ></div>
       <Routes>
-        <Route path="/" element={<Home flipScreen={flipScreen} />} />
+        <Route
+          path="/"
+          element={
+            <Home flipScreen={flipScreen} handleFlipScreen={handleFlipScreen} />
+          }
+        />
       </Routes>
     </div>
   )

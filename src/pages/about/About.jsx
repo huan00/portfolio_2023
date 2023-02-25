@@ -1,8 +1,10 @@
 import React from 'react'
 import profilePic from '../../assets/images/profilePicture.jpg'
 import './about.css'
+import { useMediaQuery } from 'react-responsive'
 
 const About = ({ setSelect }) => {
+  const isMobile = useMediaQuery({ query: '(max-width:600px)' })
   return (
     <div className="app__about">
       <div className="app__about__profileImg">
@@ -17,12 +19,13 @@ const About = ({ setSelect }) => {
           background in sales and business operations.
         </p>
         <div className="content-btn">
-          <a href="#" onClick={() => setSelect('email')}>
-            E-mail
-          </a>
+          {isMobile ? (
+            <a href="mailto:hello@huan-zeng.com">E-Mail</a>
+          ) : (
+            <button onClick={() => setSelect('email')}>E-mail</button>
+          )}
           <a
-            href="https://docs.google.com/document/d/e/2PACX-1vQ3x96xobcMD2EMFKUXY134445aR1aTwN9yOmGh3G_MnI0Ekj7OBGZVttEDKOpKToy-2qQeZw0S5eo1/pub"
-            download
+            href="https://drive.google.com/file/d/1pW0Fvt6CtcWz3hlNe_sQbDcLheG-MuWb/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >

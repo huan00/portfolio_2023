@@ -1,15 +1,19 @@
 .app__projects {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  justify-content: flex-start;
+  gap: 30px;
+  align-items: flex-start;
+  justify-items: flex-start;
+  white-space: nowrap;
 }
 
 
 .project__container {
-  width: 100px;
+  /* width: 100px; */
   cursor: pointer;
-  transition: 500ms;
+  transition: transform 500ms;
+  text-transform: capitalize;
 }
 
 .project__container:hover {
@@ -18,4 +22,16 @@
 
 .project__container img {
   width: 75px
+}
+
+@media screen and (max-width:600px) {
+  .app__projects {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+    gap: 30px;
+    
+    padding: 1rem;
+    
+    margin-top: 0;
+  }
 }

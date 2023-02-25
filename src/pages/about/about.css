@@ -48,7 +48,7 @@
   margin-top: 1rem;
 }
 
-.content-btn a {
+.content-btn a,.content-btn button {
   padding: 10px 20px;
   border-radius: 50px;
   background-color: white;
@@ -56,9 +56,28 @@
   color: black;
   cursor: pointer;
   font-size: 24px;
+  outline: none;
+  border: none;
 }
 
-.content-btn a:hover {
+.content-btn a:hover,.content-btn button:hover {
   background-color: var(--btnColor);
   color: white
+}
+
+@media screen and (max-width: 600px) {
+  .app__about {
+    flex-direction: column;
+  }
+  .app__about__profileImg {
+    width: 100%;
+  }
+  .app__about__profileImg img {
+    height: 50%;
+    width: 50%;
+  }
+  .app__about__content {
+    padding-left: 20px;
+    justify-content: flex-start;
+  }
 }

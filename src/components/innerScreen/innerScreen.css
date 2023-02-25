@@ -38,21 +38,26 @@
 }
 
 .app__inner-screen__footer {
-  width: 100%;
+  width: calc(100% - 40px );
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 
 .footer--img {
   width: 50px;
   /* background-color: white; */
   cursor: pointer;
+  transition:transform 500ms ease;
 }
 
 .footer--img img {
   width: 50px;
+}
+
+.footer--img:hover {
+  transform: scale(.9);
 }

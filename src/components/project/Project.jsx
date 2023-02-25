@@ -7,14 +7,14 @@ const Project = ({ project }) => {
   return (
     <div className="app__project">
       <div className="app__project--img">
-        <img src={project.imgUrl} alt="" />
+        <img src={project.imgUrl} alt="project_image" />
       </div>
       <div className="app__project__desc">
         <h4>{project.name}</h4>
         <p>{project.desc}</p>
         <div className="project--tech">
           {project.tech.map((tech) => (
-            <p>{tech}</p>
+            <p key={Math.random() + tech}>{tech}</p>
           ))}
         </div>
         <div className="project--link">

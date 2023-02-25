@@ -1,27 +1,20 @@
 import { useState } from 'react'
-import './innerScreen.css'
-import {
-  account,
-  github,
-  linkedin,
-  back,
-  apps
-} from '../../assets/images/icons/export'
+import { app, contacts, home } from '../../assets/images/iphoneIcons/export'
+import { linkedin, github } from '../../assets/images/icons/export'
+
+import './iphoneScreen.css'
 import Skills from '../skills/Skills'
 import About from '../../pages/about/About'
-import Email from '../email/Email'
 import Projects from '../../pages/projects/Projects'
 import Project from '../project/Project'
 
-const InnerScreen = () => {
+const IphoneScreen = () => {
   const [select, setSelect] = useState(null)
   const [project, setProject] = useState(null)
-  const display = (value) => {
+  const handleDisplay = (value) => {
     switch (value) {
       case 'about':
         return <About setSelect={setSelect} />
-      case 'email':
-        return <Email />
       case 'projects':
         return <Projects setSelect={setSelect} setProject={setProject} />
       case 'project':
@@ -34,37 +27,36 @@ const InnerScreen = () => {
   const handleSelect = (value) => {
     setSelect(value)
   }
-
   return (
-    <div className="app__inner-screen">
-      <div className="app__inner-screen__hero">{display(select)}</div>
-      <div className="app__inner-screen__footer">
-        <div className="footer--img" onClick={() => handleSelect('about')}>
-          <img src={account} alt="About" />
+    <div className="app__iphone-screen">
+      {handleDisplay(select)}
+      <div className="iphone-screen__footer">
+        <div onClick={() => handleSelect('about')}>
+          <img src={contacts} alt="about" />
           <p>About</p>
         </div>
-        <div className="footer--img" onClick={() => handleSelect('projects')}>
-          <img src={apps} alt="project" />
+        <div onClick={() => handleSelect('projects')}>
+          <img src={app} alt="projects" />
           <p>Projects</p>
         </div>
-        <div className="footer--img" onClick={() => handleSelect('')}>
-          <img src={back} alt="back" />
-          <p>back</p>
+        <div onClick={() => handleSelect()}>
+          <img src={home} alt="back" />
+          <p>Skills</p>
         </div>
-        <div className="footer--img">
+        <div>
           <a
             href="https://www.linkedin.com/in/huan-zeng/"
             target="_blank"
             rel="noreferrer"
           >
             <img src={linkedin} alt="linkedin" />
-            <p>linkedin</p>
+            <p>Linkedin</p>
           </a>
         </div>
-        <div className="footer--img">
+        <div>
           <a href="https://github.com/huan00" target="_blank" rel="noreferrer">
             <img src={github} alt="github" />
-            <p>github</p>
+            <p>Github</p>
           </a>
         </div>
       </div>
@@ -72,4 +64,4 @@ const InnerScreen = () => {
   )
 }
 
-export default InnerScreen
+export default IphoneScreen

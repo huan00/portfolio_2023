@@ -21,6 +21,12 @@
   visibility: hidden;
 }
 
+
+.app__front-face__desc {
+  line-height: 1.5rem;
+}
+
+
 .app__front-face__footer {
   width: 85%;
   display: flex;
@@ -29,8 +35,8 @@
 
   position: absolute;
   bottom: 20px;
-  transform: translateZ(200px);
-  z-index: 10;
+  transform: translateZ(2200px);
+  z-index: 120;
 }
 
 .app__front-face__footer img {
@@ -45,10 +51,17 @@
   border-radius: 50%;
 
   font-size: 12px;
-  transform: translateZ(150px);
+  transform: translateZ(250px);
 }
 
 .app__front-face__footer--img:hover {
   cursor: pointer;
   background-color: rgba(103, 96, 96, .5);
+}
+
+.screen--message {
+  background-color: green;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
 }

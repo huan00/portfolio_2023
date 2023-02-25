@@ -51,6 +51,7 @@
 
 .project--link {
   margin-right: 20px;
+  padding:20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -60,5 +61,12 @@
 .project--link img{
   width: 50px;
 }
-.project--link {}
-.project--link {}
+.project--link a:hover {
+  animation: fly 1s forwards ease-in;
+}
+
+@keyframes fly {
+  0%{transform: translate(0);}
+  50% {transform: translate(100px, -100px);}
+  100%{ transform: translate(-0px, 0px);}
+}
