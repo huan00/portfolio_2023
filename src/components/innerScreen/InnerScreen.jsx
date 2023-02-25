@@ -49,7 +49,7 @@ const InnerScreen = () => {
         </div>
         <div className="footer--img" onClick={() => handleSelect('')}>
           <img src={back} alt="back" />
-          <p>back</p>
+          <p>Skills</p>
         </div>
         <div className="footer--img">
           <a
@@ -58,13 +58,13 @@ const InnerScreen = () => {
             rel="noreferrer"
           >
             <img src={linkedin} alt="linkedin" />
-            <p>linkedin</p>
+            <p>Linkedin</p>
           </a>
         </div>
         <div className="footer--img">
           <a href="https://github.com/huan00" target="_blank" rel="noreferrer">
             <img src={github} alt="github" />
-            <p>github</p>
+            <p>Github</p>
           </a>
         </div>
       </div>

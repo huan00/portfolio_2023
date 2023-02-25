@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import './app.css'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
-import Project from './components/project/Project'
 
 const App = () => {
   const flipScreen = useRef(null)
