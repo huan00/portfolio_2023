@@ -12,18 +12,7 @@ const App = () => {
   }
   return (
     <div className="app">
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          zIndex: '-10',
-          perspective: '-3000px',
-          cursor: 'pointer',
-          transform: 'translateZ(-550px)'
-        }}
-        onClick={handleFlipScreen}
-      ></div>
+      <div className="app__open-phone" onClick={handleFlipScreen}></div>
       <Routes>
         <Route
           path="/"
