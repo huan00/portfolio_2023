@@ -3,6 +3,7 @@
   height: 95vh;
   
   position: relative;
+  z-index: 1000;
 }
 
 
