@@ -44,9 +44,9 @@ body {
   /* cursor: grabbing; */
   position: relative;
   transform-style: preserve-3d;
-  transform: translateZ(-3000px) perspective(-3000px);
+  /* transform: translateZ(-3000px) perspective(-3000px);
   -ms-transform: translateZ(-3000px) perspective(-3000px);
-  -webkit-transform: translateZ(-3000px) perspective(-3000px);
+  -webkit-transform: translateZ(-3000px) perspective(-3000px); */
 }
 
 
@@ -111,7 +111,9 @@ a {
   position: absolute;
 
   -ms-perspective: -3000px;
-  perspective: -3000px;
+  perspective: 3000px;
   cursor: pointer;
-
+  -moz-transform: rotateX(10deg) translateZ(50px);
+  transform: rotateX(10deg) translateZ(-10px);
+  z-index: -1;
 }

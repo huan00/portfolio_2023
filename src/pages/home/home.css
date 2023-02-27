@@ -7,15 +7,16 @@
   perspective-origin: 100px 200px;
 
   transform-style: preserve-3d;
-  /* transform: translate(0%, -50%) perspective(2000px) rotateX(35deg);  */
-  
+  /* transform: ;  */
+  /* transform: scale(1) translate(0%, -50%) translateZ(600px) perspective(2000px) rotateX(15deg); */
   animation: load 2s forwards ease;
+  z-index: 10;
 }
 
 @keyframes load {
   0% {transform: scale(0) rotate(35deg);}
   50% {transform: scale(50) rotate(-35deg);}
-  100% {transform: scale(1) translate(0%, -50%) perspective(2000px) rotateX(35deg);}
+  100% {transform: scale(1) translate(0%, -50%) perspective(2000px) rotateX(25deg) translateZ(250px);}
 }
 
 

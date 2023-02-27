@@ -4,8 +4,8 @@ import {
   account,
   github,
   linkedin,
-  back,
-  apps
+  apps,
+  settings
 } from '../../assets/images/icons/export'
 import Skills from '../skills/Skills'
 import About from '../../pages/about/About'
@@ -48,7 +48,7 @@ const InnerScreen = () => {
           <p>Projects</p>
         </div>
         <div className="footer--img" onClick={() => handleSelect('')}>
-          <img src={back} alt="back" />
+          <img src={settings} alt="skills" />
           <p>Skills</p>
         </div>
         <div className="footer--img">
